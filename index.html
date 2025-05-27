@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <title>PWA Poznámkovník</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>📝 Moje poznámky (offline)</h1>
-  <textarea id="note" placeholder="Napiš si něco..."></textarea>
+  <h1>📝 Moje poznámky</h1>
+  
+  <div id="notes-container">
+    <textarea placeholder="Napiš si něco..."></textarea>
+  </div>
+
+  <div class="button-container">
+    <button id="add-note">➕ Přidat poznámku</button>
+    <button id="add-photo">📷 Přidat fotku</button>
+    <input type="file" id="photo-input" accept="image/*" style="display:none">
+  </div>
+
+  <div id="photos-container"></div>
+
   <script src="app.js"></script>
 </body>
 </html>
